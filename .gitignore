@@ -131,3 +131,7 @@ dmypy.json
 # Other
 .idea/
 .DS_Store
+# Ignore dynaconf secret files
+.secrets.*
+# doit database
+.doit.db

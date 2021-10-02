@@ -1,0 +1,2 @@
+precision_threshold = 0.6
+random_state = 13
