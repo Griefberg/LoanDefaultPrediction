@@ -64,7 +64,7 @@ def get_selected_precision_metrics(
         return fixed_precision_metrics.sort_values("threshold").iloc[0].to_dict()
 
 
-def mertics_per_threshold(threshold: float, predprobs: pd.DataFrame):
+def mertics_per_threshold(threshold: float, predprobs: pd.DataFrame) -> dict:
     predprobs = predprobs.copy()
     """Calulate Model Performance (e.g. precision, recall) for a given threshold"""
     predprobs["pred"] = predprobs.predprob >= threshold
