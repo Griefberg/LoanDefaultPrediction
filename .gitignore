@@ -131,6 +131,8 @@ dmypy.json
 # Other
 .idea/
 .DS_Store
+artefacts/
+catboost_info/
 # Ignore dynaconf secret files
 .secrets.*
 # doit database

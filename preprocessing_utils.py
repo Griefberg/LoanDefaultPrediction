@@ -87,7 +87,7 @@ def preprocess_train_features(
 
 def prepare_train_df(
     df: pd.DataFrame,
-    columns_to_drop: List[str] = (),
+    columns_to_drop: List[str] = [],
     should_drop_highly_missings_features: bool = True,
 ) -> Tuple[pd.DataFrame, dict]:
     df = df.copy()
@@ -159,6 +159,7 @@ def prepare_dfs_by_time(
     Split data set on train and validation without shuffle to
     keep time series structure.
     """
+    df.sort_values("creationdate", inplace=True)
     x_train, x_validation, y_train, y_validation = train_test_split(
         df[[col for col in df.columns if col != "target"]],
         df.target,
