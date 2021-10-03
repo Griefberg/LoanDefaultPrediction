@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 pandas = "~=0.25.3"
+catboost = "==0.23.2"
+scikit-learn = "~=0.22.1"
+numpy = "~=1.18.1"
 dynaconf = "~=3.1.7"
 doit = "~=0.33"
 isort = "~=5.7"
